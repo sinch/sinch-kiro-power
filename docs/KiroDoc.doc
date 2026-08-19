@@ -1,0 +1,569 @@
+Date: Wed, 22 Jul 2026 02:38:45 +0000 (UTC)
+Message-ID: <110453800.29.1784687925553@04f00e70e459>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_28_1116579210.1784687925553"
+
+------=_Part_28_1116579210.1784687925553
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>On-Pager: Sinch Build available for AWS Kiro IDE Developers</tit=
+le>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>On-Pager: Sinch Build available for AWS Kiro IDE Developers</h1>
+    <div class=3D"Section1">
+        <div class=3D"table-wrap">
+<table data-table-width=3D"1089" data-layout=3D"align-start" data-local-id=
+=3D"b7d919bb-6638-4151-be5e-7ae2ced20b20" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 137.0px;">
+<col style=3D"width: 948.0px;">
+</colgroup>
+<tbody>
+<tr data-local-id=3D"f9d4db769cee">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"0bfb6f3dfc21" class=
+=3D"confluenceTd">
+<p local-id=3D"dc2477d1726c"><span class=3D"inline-comment-marker" data-ref=
+=3D"e8ce535d-dae0-4c45-960f-2cc27278084e">One liner</span></p></td>
+<td data-local-id=3D"3c3daa47f8c0" class=3D"confluenceTd">
+<p local-id=3D"abff2a6a2797"><span class=3D"inline-comment-marker" data-ref=
+=3D"b5de11a8-fbe1-4ded-907e-0243ee760c77">Hypothesis: We think that by list=
+ing Sinch as a Power in AWS's Kiro agentic IDE, it will place Sinch's messa=
+ging, verification and communications APIs in front of AWS-ecosystem develo=
+pers and AI agents at the moment they build, increasing Sinch's marketplace=
+ presence and developer-led adoption, resulting in an increase in account s=
+ign-ups, and opening the door to potential partnership discussions with AWS=
+. </span></p></td>
+</tr>
+<tr data-local-id=3D"557ac66f20c6">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"8a965b1a00c5" class=
+=3D"confluenceTd">
+<p local-id=3D"a54b6a1fc915">Team</p></td>
+<td data-local-id=3D"f50bbb82487e" class=3D"confluenceTd">
+<p local-id=3D"00fbcb2d8dd1"><span class=3D"inline-comment-marker" data-ref=
+=3D"31ea63ce-1c9d-4d00-9306-b4eda907bd40">AI Ecosystems team</span></p></td=
+>
+</tr>
+<tr data-local-id=3D"9f985d5ca9c2">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"80e16abd6eb5" class=
+=3D"confluenceTd">
+<p local-id=3D"b81b48c57e63">Author</p></td>
+<td data-local-id=3D"e04cb0026dfd" class=3D"confluenceTd">
+<p local-id=3D"7c1783d1984e"><a class=3D"confluence-userlink user-mention" =
+data-account-id=3D"712020:4f76ebc7-9d04-4146-bbc7-d9014ae2a935" href=3D"htt=
+ps://sinchenterprise.atlassian.net/wiki/people/712020:4f76ebc7-9d04-4146-bb=
+c7-d9014ae2a935?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=
+=3D"251428909" data-linked-resource-version=3D"1" data-linked-resource-type=
+=3D"userinfo" data-base-url=3D"https://sinchenterprise.atlassian.net/wiki">=
+Jason Coutsodimitropoulos</a></p></td>
+</tr>
+<tr data-local-id=3D"7b228c9f6a18">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"84cabaeb7334" class=
+=3D"confluenceTd">
+<p local-id=3D"4cd24c75ed67"><span class=3D"inline-comment-marker" data-ref=
+=3D"19915694-8023-4126-99b6-7dc298ff4f61">JPD Link</span></p></td>
+<td data-local-id=3D"210561932092" class=3D"confluenceTd">
+<p local-id=3D"1adf598bea26"><span class=3D"static-jira-issues_count conflu=
+ence-jim-macro aui-lozenge" style=3D"display:inline-block;padding:1px 5px;b=
+order:1px solid #DFE1E6; border-radius:3px;background-color:#FAFBFC;color:#=
+42526E; font-size:11px;font-weight:600;line-height:1;text-transform:upperca=
+se; letter-spacing:0.5px;vertical-align:baseline;"><a class=3D"issue-link" =
+href=3D"https://messagemedia.atlassian.net/browse/EPR-408" style=3D"color:#=
+42526E;text-decoration:none;">EPR-408: Sinch Build available for AWS Kiro I=
+DE Developers</a></span> (<span class=3D"status-macro aui-lozenge aui-lozen=
+ge-visual-refresh aui-lozenge-complete">DISCOVER</span> Status in JPD)</p><=
+/td>
+</tr>
+<tr data-local-id=3D"9474a040da48">
+<td data-highlight-colour=3D"#f4f5f7" data-local-id=3D"9d77599366a4" class=
+=3D"confluenceTd">
+<p local-id=3D"b891f1270896">Jira Link</p></td>
+<td data-local-id=3D"76b5f0ae57a9" class=3D"confluenceTd">
+<p local-id=3D"a420f8d1fec3"><span class=3D"static-jira-issues_count conflu=
+ence-jim-macro aui-lozenge" style=3D"display:inline-block;padding:1px 5px;b=
+order:1px solid #DFE1E6; border-radius:3px;background-color:#FAFBFC;color:#=
+42526E; font-size:11px;font-weight:600;line-height:1;text-transform:upperca=
+se; letter-spacing:0.5px;vertical-align:baseline;"><a class=3D"issue-link" =
+href=3D"https://messagemedia.atlassian.net/browse/PD-319" style=3D"color:#4=
+2526E;text-decoration:none;">PD-319: AWS Kiro IDE Availability</a></span></=
+p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 local-id=3D"18fe398b6e31" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-OPPORTUNITYDEFINITION"><span class=3D"inline-comment-marker" d=
+ata-ref=3D"3f474bf5-eb38-4ef6-9dbb-dce9c6926478">OPPORTUNITY DEFINITION</sp=
+an></h3>
+<p local-id=3D"63e543d508df"><em>What is the opportunity or problem we shou=
+ld solve, for whom and why?</em></p>
+<h4 local-id=3D"cbca2c3f7949" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Articulatetheproblemwewanttosolveandwhy">Articulate the proble=
+m we want to solve and why</h4>
+<p local-id=3D"f22f65dd1972">Developers are increasingly building inside ag=
+entic IDEs, and AWS Kiro is a fast-growing, enterprise-grade entrant in tha=
+t category (spec-driven, running on Amazon Bedrock, deeply tied into the AW=
+S builder ecosystem). Kiro's "Powers" marketplace lets partners surface the=
+ir APIs directly inside the developer's workflow. Sinch has no presence the=
+re, while a direct competitor - Vonage - became the first CPaaS in Kiro on =
+18 June 2026. <span class=3D"inline-comment-marker" data-ref=3D"7f06e778-fc=
+d0-4b47-9423-1abaa96cef09">Every week Sinch is absent, AWS-ecosystem develo=
+pers and AI agents provision communications through whoever is discoverable=
+ at the point of building, which is currently Vonage. This is a distributio=
+n and marketplace-listing gap on a surface that maps exactly to the team's =
+remit.</span></p>
+<p local-id=3D"9f85c17fd15c">Solving this gap should benefit Sinch at least=
+ in two ways:</p>
+<ol start=3D"1" local-id=3D"3a3df92f93f9">
+<li local-id=3D"3a9c27380149">
+<p local-id=3D"edf78648cc54">Discoverability/brand awareness - we=E2=80=99v=
+e already seen Sinch=E2=80=99s discoverability increase over the last coupl=
+e of quarters, which can=E2=80=99t only be attributed to marketplace listin=
+gs, however it isn=E2=80=99t coincidental that Sinch is now showing where i=
+t previously was not. Additionally, this demonstrates Sinch=E2=80=99s inves=
+tment and leadership in the AX/DX space, which reflects positively within G=
+artner reviews as an example</p></li>
+<li local-id=3D"b2445493e77a">
+<p local-id=3D"112eca638fda">Driving Build account sign-ups - being availab=
+le within the marketplace, and visible to developers is key.</p></li>
+</ol>
+<h4 local-id=3D"ff7fc7913dde" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Definethetargetcustomeranduser">Define the target customer and=
+ user</h4>
+<p local-id=3D"3dae501b77d8"><span class=3D"inline-comment-marker" data-ref=
+=3D"8720b7e8-ed69-45b4-98c6-9aba908a94ba">Enterprise and individual develop=
+ers building in Kiro / the AWS builder ecosystem, "vibe-coders" prototyping=
+ with agentic tooling, and the AI agents that provision messaging, verifica=
+tion and communications on a developer's behalf.</span></p>
+<h4 local-id=3D"d35c7ab5c1ac" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Estimatethemarketandcustomerdemand">Estimate the market and cu=
+stomer demand</h4>
+<p local-id=3D"5b9a41270ea1"><span class=3D"inline-comment-marker" data-ref=
+=3D"cf88a6be-21ab-42f4-9f1b-806878cd58e9">Kiro drew more than 250,000 devel=
+opers during preview (300M+ requests, trillions of tokens) and is now gener=
+ally available with free and paid tiers. Its Powers ecosystem is expanding =
+quickly (launch partners include Datadog, Figma, Stripe and Supabase; Hashi=
+Corp and AWS Observability added since). The CPaaS category inside Kiro is =
+effectively empty - Vonage is the only CPaaS Power today - so this is an op=
+en category on a growing surface, not a crowded one. </span></p>
+<h4 local-id=3D"dbd5f2350518" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Sharemarketorcustomerinsightsthatvalidatestheopportunity"><spa=
+n class=3D"inline-comment-marker" data-ref=3D"3905917f-e68c-47f7-8c67-6d12c=
+bd2310e">Share market or customer insights that validates the opportunity</=
+span></h4>
+<p local-id=3D"7cc58809cf44"><span class=3D"inline-comment-marker" data-ref=
+=3D"3905917f-e68c-47f7-8c67-6d12cbd2310e">Three signals: </span></p>
+<ol start=3D"1" local-id=3D"065e48f53e95">
+<li local-id=3D"a88ccedb0397">
+<p local-id=3D"a9e041016e2b"><span class=3D"inline-comment-marker" data-ref=
+=3D"3905917f-e68c-47f7-8c67-6d12cbd2310e">Vonage's June 2026 launch validat=
+es that a CPaaS Power is viable and worth a competitor's investment</span><=
+/p></li>
+<li local-id=3D"2bfc5eef91a1">
+<p local-id=3D"eb98d41e5a48"><span class=3D"inline-comment-marker" data-ref=
+=3D"3905917f-e68c-47f7-8c67-6d12cbd2310e">AWS is actively recruiting ISV/pl=
+atform partners into Powers, so the door is open</span></p></li>
+<li local-id=3D"3ba1e2f7769f">
+<p local-id=3D"54c8ab8fd5c5"><span class=3D"inline-comment-marker" data-ref=
+=3D"3905917f-e68c-47f7-8c67-6d12cbd2310e">Sinch has already shipped the sam=
+e class of listing into six agentic IDEs (Cursor, VSCode/Windsurf, Claude C=
+ode, Gemini CLI, Google Antigravity, JetBrains), so the pattern and the und=
+erlying assets are proven.</span></p></li>
+</ol>
+<h4 local-id=3D"cc5bd413ea35" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Requirements,scopeandconsiderationsfortheexpectedsolution">Req=
+uirements, scope and considerations for the expected solution</h4>
+<p local-id=3D"953d6a3db505"><span class=3D"inline-comment-marker" data-ref=
+=3D"d42424ad-aea7-4c23-b738-bb1211b37616">A Kiro Power is a lightweight, MC=
+P-based bundle: a </span><code><span class=3D"inline-comment-marker" data-r=
+ef=3D"d42424ad-aea7-4c23-b738-bb1211b37616">POWER.md</span></code><span cla=
+ss=3D"inline-comment-marker" data-ref=3D"d42424ad-aea7-4c23-b738-bb1211b376=
+16"> manifest plus an MCP server, steering files and hooks, published via G=
+itHub and installable in one click. Sinch already owns the core building bl=
+ocks - an existing </span><code><span class=3D"inline-comment-marker" data-=
+ref=3D"d42424ad-aea7-4c23-b738-bb1211b37616">@sinch/mcp</span></code><span =
+class=3D"inline-comment-marker" data-ref=3D"d42424ad-aea7-4c23-b738-bb1211b=
+37616"> server and a skills catalog reused across its other IDE plugins. </=
+span></p>
+<hr local-id=3D"b5a151e4-071f-4000-b2ee-253613f3f51e">
+<h3 local-id=3D"7c3e6cc104aa" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-SOLUTIONDISCOVERY">SOLUTION DISCOVERY</h3>
+<p local-id=3D"ca1d8514cf72"><em>How should we solve it and what will it ta=
+ke?</em></p>
+<h4 local-id=3D"3b3227c5711e" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Proposedtechnicalsolution">Proposed technical solution</h4>
+<p local-id=3D"d0dec04545db">Package Sinch's existing MCP server and skills=
+ catalog as a Kiro Power (<code>POWER.md</code> manifest, Kiro-format <code=
+>mcp.json</code>, and steering files tuned to Kiro's spec-driven workflow).=
+ Optionally ship a Sinch documentation MCP server to provide context-aware,=
+ in-IDE guidance - the differentiator Vonage led with. This is primarily a =
+repackaging of existing assets rather than net-new product.</p>
+<h4 local-id=3D"982a0e89aaf8" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Designanduserexperience">Design and user experience</h4>
+<p local-id=3D"0a18176620c2">No net-new UI. One-click install from kiro.dev=
+, with keyword-triggered activation so the Power loads only when a develope=
+r's task is relevant, and in-IDE guidance so developers never leave their w=
+orkflow.</p>
+<h4 local-id=3D"946e16c30ecd" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Phasesforiterativedelivery">Phases for iterative delivery</h4>
+<p local-id=3D"df60ede2ca73">Sequenced, not time-boxed (see EPR-408 for the=
+ full validation list):</p>
+<ol start=3D"1" local-id=3D"cf5f20b0-20cd-400e-839f-72fea4d2adbb">
+<li local-id=3D"78d1baa8-01ff-4917-80d9-3d70974dff5b">
+<p local-id=3D"bac3e2449e4c"><strong>Validate before build</strong> - confi=
+rm audience relevance and ICP overlap, <span class=3D"inline-comment-marker=
+" data-ref=3D"87c2a512-b651-4ecc-a702-8183bc27171d">confirm attribution is =
+possible</span>, and run a technical feasibility spike wrapping the existin=
+g MCP + skills into a minimal Power.</p></li>
+<li local-id=3D"d01c7836-df40-4969-bace-b684a65b3afd">
+<p local-id=3D"e27094d640b2"><strong>Self-published Power</strong> - ship a=
+ GitHub-published Power covering a focused, differentiated capability set a=
+nd instrument it for measurement.</p></li>
+<li local-id=3D"fa656ffb-6745-4604-bb9f-fdb496df1a4a">
+<p local-id=3D"270bb0351be0"><strong>Curated partner listing</strong> - pur=
+sue featured placement and co-marketing via AWS Partner Solutions Architect=
+, including any Bedrock/Amazon Nova co-build angle.</p></li>
+</ol>
+<h4 local-id=3D"0560502b8fd5" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Pricing&amp;Packaging">Pricing &amp; Packaging</h4>
+<p local-id=3D"548f2ee80c02">The Power itself is free to install, consisten=
+t with Kiro's model. Monetisation is indirect: downstream API consumption, =
+new account sign-ups, and first-message/verification events driven by in-ID=
+E discovery. Packaging should lead with the capabilities most likely to con=
+vert AWS-ecosystem developers (messaging breadth and/or Verify/Number Looku=
+p as a fraud-and-identity wedge).</p>
+<h4 local-id=3D"95cf2248d9cb" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Go-to-marketplanning"><span class=3D"inline-comment-marker" da=
+ta-ref=3D"1e1920fb-50f6-4533-985b-5e4451f79806">Go-to-market planning</span=
+></h4>
+<ul local-id=3D"47fbb606e461">
+<li local-id=3D"b79135199279">
+<p local-id=3D"16fc2e89feae"><a class=3D"confluence-userlink user-mention" =
+data-account-id=3D"712020:f29ce452-7e3e-4c12-8181-0356e99bf753" href=3D"htt=
+ps://sinchenterprise.atlassian.net/wiki/people/712020:f29ce452-7e3e-4c12-81=
+81-0356e99bf753?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=
+=3D"1559232530" data-linked-resource-version=3D"1" data-linked-resource-typ=
+e=3D"userinfo" data-base-url=3D"https://sinchenterprise.atlassian.net/wiki"=
+>Gunnar Grosch</a> Engage the AWS Partner Solutions Architect to understand=
+ curated placement and co-marketing</p></li>
+<li local-id=3D"03a9042d5b12">
+<p local-id=3D"94f182c96d86">Coordinate a launch announcement mirroring the=
+ competitor's "<a href=3D"https://www.vonage.com/about-us/newsroom/press-re=
+leases/Vonage-Brings-Agentic-Communications-to-Millions-of-Developers-with-=
+Vonage-API-Power-for-Kiro/aab35661-475c-47ae-930c-8bcde3e8901f/" class=3D"e=
+xternal-link" rel=3D"nofollow">first/leading CPaaS in Kiro</a>" positioning=
+ where accurate</p></li>
+<li local-id=3D"bba6cda319e2">
+<p local-id=3D"463ac5b136bb">Enable sales/partnerships on the AWS-ecosystem=
+ story</p></li>
+</ul>
+<h4 local-id=3D"d7dcef396a7a" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Stakeholdersanddependencies"><span class=3D"inline-comment-mar=
+ker" data-ref=3D"6fc6d985-971d-4e64-bb8f-88ee6b395a7f">Stakeholders and dep=
+endencies</span></h4>
+<ul local-id=3D"e68a76c14977">
+<li local-id=3D"7a62eeaae5d5">
+<p local-id=3D"38cee29d93e6">DevEx engineering and the owners of <code>@sin=
+ch/mcp</code> and the skills catalog</p></li>
+<li local-id=3D"392bfdcce153">
+<p local-id=3D"c71ac18670f9">AWS partnership/alliances - investigate what o=
+ptions we have to work with AWS</p>
+<ul local-id=3D"41f89b3b6324">
+<li local-id=3D"8204bc97a017">
+<p local-id=3D"87d2dc3f6a4a"><a class=3D"confluence-userlink user-mention" =
+data-account-id=3D"712020:f29ce452-7e3e-4c12-8181-0356e99bf753" href=3D"htt=
+ps://sinchenterprise.atlassian.net/wiki/people/712020:f29ce452-7e3e-4c12-81=
+81-0356e99bf753?ref=3Dconfluence" target=3D"_blank" data-linked-resource-id=
+=3D"1559232530" data-linked-resource-version=3D"1" data-linked-resource-typ=
+e=3D"userinfo" data-base-url=3D"https://sinchenterprise.atlassian.net/wiki"=
+>Gunnar Grosch</a> can potentially put us in contact with Amazon team membe=
+r</p></li>
+</ul></li>
+<li local-id=3D"472002d0b03b">
+<p local-id=3D"ba2d027fb9c5">Product marketing - any GTM activity we want t=
+o put around this release, similar to our approach for Cursor</p>
+<ul local-id=3D"f2d5c90ffa26">
+<li local-id=3D"bacd51306e52">
+<p local-id=3D"9943a152c14b">At the very least, posting a blog should be ac=
+tioned <a href=3D"https://www.vonage.com/about-us/newsroom/press-releases/V=
+onage-Brings-Agentic-Communications-to-Millions-of-Developers-with-Vonage-A=
+PI-Power-for-Kiro/aab35661-475c-47ae-930c-8bcde3e8901f/" local-id=3D"8d8262=
+19b15a" data-card-appearance=3D"inline" class=3D"external-link" rel=3D"nofo=
+llow">https://www.vonage.com/about-us/newsroom/press-releases/Vonage-Brings=
+-Agentic-Communications-to-Millions-of-Developers-with-Vonage-API-Power-for=
+-Kiro/aab35661-475c-47ae-930c-8bcde3e8901f/</a></p></li>
+</ul></li>
+<li local-id=3D"fb7a1c0552dc">
+<p local-id=3D"9682d52097b4">Build Product Documentation - will be required=
+ to update support documentation to include references to Kiro (aligned wit=
+h existing IDE documentation)</p></li>
+<li local-id=3D"f4fde3e355fb">
+<p local-id=3D"c332f0825139">Product Legal - review of the Kiro terms and p=
+rivacy policy are underway - email send to <a class=3D"confluence-userlink =
+user-mention" data-account-id=3D"712020:61c5247d-6b78-4966-94ac-038283e3c22=
+7" href=3D"https://sinchenterprise.atlassian.net/wiki/people/712020:61c5247=
+d-6b78-4966-94ac-038283e3c227?ref=3Dconfluence" target=3D"_blank" data-link=
+ed-resource-id=3D"686882894" data-linked-resource-version=3D"1" data-linked=
+-resource-type=3D"userinfo" data-base-url=3D"https://sinchenterprise.atlass=
+ian.net/wiki">Aswin S</a></p></li>
+</ul>
+<h4 local-id=3D"c4f1a44e65e0" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-Estimatetheeffort"><span class=3D"inline-comment-marker" data-=
+ref=3D"6d1be3bd-2f0d-4c6f-b0f8-791497da2be5">Estimate the effort</span></h4=
+>
+<p local-id=3D"63ccba20a5bf">TBD - to be set after the technical feasibilit=
+y spike in Phase 1.</p>
+<p local-id=3D"b962a9a73c4b">Initial sizing has this at 1-1.5 sprints worth=
+ of effort.</p>
+<h4 local-id=3D"836410e5c734" id=3D"On-Pager:SinchBuildavailableforAWSKiroI=
+DEDevelopers-SuccessmetricsandKPIs">Success metrics and KPIs</h4>
+<p local-id=3D"47cda5967784">Reporting ability TBC - pending discovery</p>
+<p local-id=3D"8ed0ccc7cceb">Sales/Partnership Metrics</p>
+<ul local-id=3D"86effe4290c1">
+<li local-id=3D"04c52a451d2c">
+<p local-id=3D"1e822b046cc4">Supporting AWS partnership discussions</p></li=
+>
+<li local-id=3D"35aee5f14a55">
+<p local-id=3D"e4d6f676e6a6">Assisting in the ability to drive new leads</p=
+></li>
+</ul>
+<p local-id=3D"1b160226b96e">Product Metrics</p>
+<ul local-id=3D"88cd694f142e">
+<li local-id=3D"4bcfca47126d">
+<p local-id=3D"157943a45e82">Power installs</p></li>
+<li local-id=3D"dc28e6671a90">
+<p local-id=3D"fe359140ff74">Referral traffic from Kiro-attributed sources =
+to Sinch developer docs and dashboard</p></li>
+<li local-id=3D"1eb259166d2b">
+<p local-id=3D"caaff28b9769">Account sign-ups and first-message/verificatio=
+n events attributable to the Kiro install path</p></li>
+<li local-id=3D"de160792ce0a">
+<p local-id=3D"3a2747f2f491">Secured curated/featured partner placement</p>=
+</li>
+<li local-id=3D"cfbe080622cf">
+<p local-id=3D"d665ed97bd7a">Time-to-first-successful-API-call for a develo=
+per starting in Kiro</p></li>
+</ul>
+    </div>
+</body>
+</html>
+------=_Part_28_1116579210.1784687925553--
