@@ -1,0 +1,50 @@
+---
+name: sinch-email-mailgun-inspect
+description: "Inspect email content for quality and accessibility via Mailgun Inspect API"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/email/mailgun/inspect.md
+---
+# Inspect Email (Mailgun Inspect)
+
+Submit HTML or email content to Mailgun Inspect for accessibility testing, link validation, image validation, and pre-send quality checks. Uses Basic Auth (api:API_KEY).
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Perform the API call immediately.**
+
+## Input
+
+- `--html` / `-H`: HTML content to inspect (inline or path to file) - required
+- `--type` / `-t`: Inspection type: accessibility, links, images - optional, default accessibility
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. If the request has no details: ask for HTML content (paste or file path) and inspection type. Otherwise parse.
+
+1. Validate: --html (non-empty or path to readable file). Get MAILGUN_API_KEY. Base: api.mailgun.net or api.eu.mailgun.net. If missing, report "Mailgun is not configured."
+
+2. POST https://api.mailgun.net/v1/inspect/accessibility (or relevant /v1/inspect/* endpoint) with Basic Auth, Content-Type application/json, body: { "html": "..." }. Adjust endpoint for links/images if --type specified.
+
+3. Display results: accessibility issues, link validity, image issues, etc. "✅ Inspection complete". Handle 401, 400.
+
+4. Handle all errors gracefully.
+
+## Examples
+
+```
+/sinch:email:mailgun:inspect --html="<html><body><h1>Hello</h1></body></html>"
+/sinch:email:mailgun:inspect --type=accessibility -H "<p>Content</p>"
+```
+
+## API Reference
+
+- **Endpoint**: POST /v1/inspect/accessibility (and other inspect endpoints)
+- **Auth**: Basic api:API_KEY

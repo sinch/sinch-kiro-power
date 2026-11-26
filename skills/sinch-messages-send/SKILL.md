@@ -1,0 +1,122 @@
+---
+name: sinch-messages-send
+description: "Send a text message via Sinch Conversation API (SMS/RCS only)"
+license: Apache-2.0
+allowed-tools: mcp__sinch__send-text-message mcp__sinch__send-media-message mcp__sinch__send-location-message mcp__sinch__send-choice-message mcp__sinch__send-template-message mcp__sinch__sinch-mcp-configuration
+argument-hint: --to=<phone> --message=<text> [--channel=SMS|RCS] [--type=text|media|location|choice|template]
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/api/messages/send.md
+---
+# Send Message
+
+Send a text message to a recipient using the Sinch Conversation API. Currently supports SMS and RCS channels.
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Do NOT create Python/JavaScript files. Perform the API call immediately using the instructions below.**
+
+## Input
+
+- `--to` / `-t`: Recipient phone number (E.164 format, e.g., +14155551234) - required
+- `--message` / `-m`: Text content - required
+- `--channel` / `-c`: Channel (SMS or RCS) - optional, defaults to SMS
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. Check if the request has no details or only contains the command name:
+   - If empty or no meaningful arguments provided, enter interactive mode:
+     * Ask: "📱 What is the recipient's phone number? (E.164 format, e.g., +14155551234)"
+     * Ask: "💬 What message do you want to send?"
+     * Ask: "📡 Which channel? (SMS or RCS, default: SMS)"
+     * Use the provided answers as the arguments for the following steps
+   - If arguments are provided, proceed directly to step 1
+
+1. Parse and validate arguments from the request or interactive input:
+   - Validate that `--to` is provided and in E.164 format (e.g., +14155551234)
+   - Validate that `--message` is provided and non-empty
+   - If `--channel` is not provided, default to "SMS"
+   - Normalize channel to uppercase (sms → SMS, rcs → RCS)
+   - Validate that channel is either "SMS" or "RCS" (reject other channels)
+
+2. Try to call `mcp__sinch__send-text-message` with the recipient, message, and channel.
+
+3. If MCP tool is available:
+   - Report the result or handle any errors returned by the tool
+   - On success: Display message ID, recipient, channel, and status
+   - Skip to step 7
+
+4. If MCP tool is NOT available, fallback to direct API implementation:
+   - Retrieve Sinch configuration from environment variables:
+     * PROJECT_ID (or legacy CONVERSATION_PROJECT_ID)
+     * CONVERSATION_REGION
+     * CONVERSATION_APP_ID
+     * KEY_ID (or legacy CONVERSATION_KEY_ID)
+     * KEY_SECRET (or legacy CONVERSATION_KEY_SECRET)
+   - If any are missing, report: "Sinch API is not configured. Please set: PROJECT_ID, KEY_ID, KEY_SECRET, CONVERSATION_REGION, CONVERSATION_APP_ID"
+
+5. Send the message using the Sinch Conversation API:
+   - Endpoint: `POST https://{region}.conversation.api.sinch.com/v1/projects/{projectId}/messages:send`
+   - Use OAuth2 authentication with key ID and secret to generate access token
+   - Include authorization header: `Authorization: Bearer {access_token}`
+   - Request body:
+     ```json
+     {
+       "app_id": "{appId}",
+       "recipient": {
+         "identified_by": {
+           "channel_identities": [{
+             "channel": "{CHANNEL}",
+             "identity": "{recipient}"
+           }]
+         }
+       },
+       "message": {
+         "text_message": {
+           "text": "{message}"
+         }
+       }
+     }
+     ```
+
+6. Handle the API response:
+   - On success (200/201): "✅ Message sent successfully!"
+   - Display details: Message ID, Recipient, Channel, Status
+   - Include the message ID for status tracking
+
+7. Handle errors gracefully:
+   - If validation fails, provide clear error messages about what needs to be fixed
+   - If API call fails, display error with status code and description
+   - If channel not configured: "Channel not configured in your Conversation app. Please configure the channel in Sinch Dashboard."
+
+## Examples
+
+Send an SMS message:
+```
+/sinch:api:messages:send --to=+14155551234 --message="Hello"
+```
+
+Send an RCS message:
+```
+/sinch:api:messages:send --to=+14155551234 --message="Hello" --channel=RCS
+```
+
+## API Reference
+
+- **MCP Tool**: `mcp__sinch__send-text-message`
+- **API Endpoint**: `POST /v1/projects/{projectId}/messages:send`
+- **Documentation**: https://developers.sinch.com/docs/conversation/api-reference/conversation/tag/Messages/#tag/Messages/operation/Messages_SendMessage
+
+## Notes
+
+- Phone numbers must be in E.164 format (+country_code + number)
+- Ensure your Conversation app has the appropriate channel configured
+- SMS is the default channel if not specified
+- RCS requires RCS capability to be enabled in your app
+- This command uses the MCP tool `mcp__sinch__send-text-message` which handles API authentication and message sending

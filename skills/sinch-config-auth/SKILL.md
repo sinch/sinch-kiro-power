@@ -1,0 +1,44 @@
+---
+name: sinch-config-auth
+description: "Show Sinch API authentication setup guide for all products"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/config/auth.md
+---
+# Sinch Authentication Setup
+
+Display a concise authentication guide for Sinch APIs used by this plugin. Do NOT generate script files. Output the guide directly.
+
+## Instructions
+
+**Display the following information directly - do not write code or scripts:**
+
+1. **Sinch Dashboard**
+   - Go to https://dashboard.sinch.com
+   - Settings > Access Keys: note **Project ID**, create **Access Key** (Key ID + Key Secret). Store Key Secret securely — shown only once.
+
+2. **Credential types by product**
+   - **OAuth2 (Project ID + Key ID + Key Secret)**: Conversation API, Numbers, Fax, Batch, Templates, Number Lookup, 10DLC, Elastic SIP Trunking, Provisioning. Set: PROJECT_ID, KEY_ID, KEY_SECRET. For messaging, also set CONVERSATION_REGION and CONVERSATION_APP_ID.
+   - **Application Key + Secret**: Voice API, Verification API. Set: VOICE_APPLICATION_KEY, VOICE_APPLICATION_SECRET; or verification app credentials.
+   - **Mailgun**: MAILGUN_API_KEY, MAILGUN_DOMAIN, MAILGUN_REGION (us or eu).
+
+3. **Getting an OAuth2 token (for REST)**
+   - POST https://auth.sinch.com/oauth2/token with grant_type=client_credentials, Basic Auth KEY_ID:KEY_SECRET. Use returned access_token as Bearer (valid ~1 hour).
+
+4. **Agent settings**
+   - Configure credentials in the environment or secret settings used by your agent client.
+   - Restart the client or its MCP server after changing credentials.
+   - The legacy names CONVERSATION_PROJECT_ID, CONVERSATION_KEY_ID, and CONVERSATION_KEY_SECRET refer to the same values. Prefer the canonical names above.
+   - Direct command fallbacks accept the legacy names during migration. The Sinch Build MCP reads the canonical names.
+
+5. **Links**
+   - Dashboard: https://dashboard.sinch.com
+   - Developer docs: https://developers.sinch.com
+   - LLMs index: https://developers.sinch.com/llms.txt
+
+Do not execute API calls in this command; only display the guide.

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sinch",
+  "version": "1.0.0",
+  "description": "Sinch communications APIs for AI coding agents — SMS, MMS, RCS, WhatsApp, Voice, Verification, Numbers, and Mailgun email.",
+  "author": {
+    "name": "Sinch",
+    "email": "ecosystems@sinch.com",
+    "url": "https://sinch.com/"
+  },
+  "homepage": "https://developers.sinch.com/",
+  "repository": "https://github.com/sinch/sinch-kiro-power",
+  "license": "Apache-2.0",
+  "keywords": [
+    "sinch",
+    "messaging",
+    "sms",
+    "rcs",
+    "whatsapp",
+    "voice",
+    "verification",
+    "email",
+    "mcp"
+  ]
+}
