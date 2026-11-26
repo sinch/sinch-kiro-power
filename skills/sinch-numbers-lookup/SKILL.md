@@ -1,0 +1,51 @@
+---
+name: sinch-numbers-lookup
+description: "Look up phone number details (carrier, line type, etc.) via Sinch Number Lookup API"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/api/numbers/lookup.md
+---
+# Number Lookup
+
+Retrieve details about one or more phone numbers using the Sinch Number Lookup API: carrier, line type, porting status, VoIP probability, etc. Uses OAuth2.
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Perform the API call immediately.**
+
+## Input
+
+- `--numbers` / `-n`: Comma-separated E.164 numbers to look up - required
+- `--format` / `-f`: Output format (table or json) - optional, default table
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. If the request has no details: ask for phone number(s) to look up. Otherwise parse.
+
+1. Validate: --numbers (at least one E.164). Get PROJECT_ID, KEY_ID, KEY_SECRET (or the legacy CONVERSATION_* aliases). Lookup API: https://lookup.api.sinch.com/v2. If missing, report "Sinch API is not configured."
+
+2. Request body: numbers (array of E.164 strings). POST https://lookup.api.sinch.com/v2/projects/{projectId}/lookups with OAuth2 Bearer token.
+
+3. Format response: table (number, carrier, line type, etc.) or JSON. Display "✅ Lookup complete". Handle 400, 401 with clear messages.
+
+4. Handle all errors gracefully.
+
+## Examples
+
+```
+/sinch:api:numbers:lookup --numbers=+14155551234
+/sinch:api:numbers:lookup -n +14155551234,+14159876543 --format=json
+```
+
+## API Reference
+
+- **Base URL**: https://lookup.api.sinch.com/v2
+- **Endpoint**: POST /projects/{projectId}/lookups
+- **Documentation**: https://developers.sinch.com/docs/number-lookup/

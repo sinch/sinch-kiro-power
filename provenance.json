@@ -1,0 +1,13 @@
+{
+  "profile": "kiro-sinch",
+  "sourceCommit": "4702072858d21c31d6c22672229aa497ef15189a",
+  "skillsLock": {
+    "resolvedCommit": "76c42f7306844803507be3c3a6cfe76406e45cc4",
+    "subtreeDigest": "e4c9892671750b3ea56c0767c2cfc89005a2f9aa1e61f28f0269b3413680ea51"
+  },
+  "skills": 66,
+  "mcpServers": [
+    "sinch",
+    "sinch-docs"
+  ]
+}

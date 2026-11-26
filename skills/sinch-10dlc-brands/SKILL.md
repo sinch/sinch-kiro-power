@@ -1,0 +1,54 @@
+---
+name: sinch-10dlc-brands
+description: "List or create 10DLC brand registrations via Sinch (US A2P SMS)"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/api/10dlc/brands.md
+---
+# 10DLC Brand Registrations
+
+List or create 10DLC (US A2P SMS) brand registrations using the Sinch 10DLC API. Brands must be registered before creating campaigns. Uses OAuth2. Base: https://us10dlc.api.sinch.com/v1.
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Perform the API call immediately.**
+
+## Input
+
+- `--action` / `-a`: list or create - optional, default list
+- `--display-name` / `-n`: Brand display name (for create) - required if action=create
+- `--entity-type` / `-e`: Entity type (PRIVATE, PUBLIC, etc.) - optional for create
+- `--format` / `-f`: Output format (table or json) - optional
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. If the request has no details: ask "List brands or create a new brand?" and get action, or for create get display name. Otherwise parse.
+
+1. Validate: --action (list|create), for create require --display-name. Get PROJECT_ID, KEY_ID, KEY_SECRET (or the legacy CONVERSATION_* aliases). If missing, report "Sinch API is not configured."
+
+2. If list: GET https://us10dlc.api.sinch.com/v1/projects/{projectId}/brandRegistrations with OAuth2. Display table or JSON.
+
+3. If create: POST https://us10dlc.api.sinch.com/v1/projects/{projectId}/brandRegistrations with body (displayName, entityType if needed). Return brand ID. Handle 400 (validation).
+
+4. "✅ Brands listed" or "✅ Brand created". Handle 401, 404. Handle all errors gracefully.
+
+## Examples
+
+```
+/sinch:api:10dlc:brands
+/sinch:api:10dlc:brands --action=create --display-name="Acme Corp"
+```
+
+## API Reference
+
+- **Base URL**: https://us10dlc.api.sinch.com/v1
+- **List**: GET /projects/{projectId}/brandRegistrations
+- **Create**: POST /projects/{projectId}/brandRegistrations
+- **Documentation**: https://developers.sinch.com/docs/10dlc/

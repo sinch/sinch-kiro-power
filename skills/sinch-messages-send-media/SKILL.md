@@ -1,0 +1,66 @@
+---
+name: sinch-messages-send-media
+description: "Send a media message (image, video, document) via Sinch Conversation API"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/api/messages/send-media.md
+---
+# Send Media Message
+
+Send a media message (image, video, audio, or document) to a recipient using the Sinch Conversation API. Supports SMS (MMS), RCS, WhatsApp, and other channels that support media.
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Do NOT create Python/JavaScript files. Perform the API call immediately using the instructions below.**
+
+## Input
+
+- `--to` / `-t`: Recipient phone number (E.164 format) - required
+- `--url` / `-u`: Public URL of the media file - required
+- `--channel` / `-c`: Channel (SMS, RCS, WHATSAPP, MMS) - optional, defaults to SMS
+- `--caption` / `-C`: Optional caption text for the media
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. Check if the request has no details or only contains the command name:
+   - If empty, enter interactive mode: ask for recipient, media URL, channel, and optional caption
+   - If arguments provided, proceed to step 1
+
+1. Parse and validate: `--to` (E.164), `--url` (valid HTTPS URL), `--channel` (default SMS), optional `--caption`
+
+2. Try MCP tool `mcp__sinch__send-media-message` with recipient, url, channel, and caption. On success display result and skip to step 7.
+
+3. If MCP not available, get config from env: PROJECT_ID, KEY_ID, KEY_SECRET (or the legacy CONVERSATION_* aliases), plus CONVERSATION_REGION and CONVERSATION_APP_ID. If missing, report "Sinch API is not configured."
+
+4. Send via Conversation API: POST https://{region}.conversation.api.sinch.com/v1/projects/{projectId}/messages:send with OAuth2 Bearer token. Request body: app_id, recipient (channel_identities with channel and identity), message.media_message with url and optional caption.
+
+5. On success (200/201): display "✅ Media message sent successfully!" with message ID, recipient, channel.
+
+6. Handle errors: validation failures, missing config, API errors with status and description.
+
+7. Handle errors gracefully for all paths.
+
+## Examples
+
+```
+/sinch:api:messages:send-media --to=+14155551234 --url=https://example.com/image.jpg
+/sinch:api:messages:send-media -t +14155551234 -u https://example.com/video.mp4 --channel=RCS --caption="Check this out"
+```
+
+## API Reference
+
+- **MCP Tool**: `mcp__sinch__send-media-message`
+- **API Endpoint**: POST /v1/projects/{projectId}/messages:send
+- **Documentation**: https://developers.sinch.com/docs/conversation/message-types
+
+## Notes
+
+- Media URL must be publicly accessible (HTTPS). MMS has ~1MB limit; RCS/WhatsApp support larger files.
+- Channel must support media (SMS uses MMS where available).

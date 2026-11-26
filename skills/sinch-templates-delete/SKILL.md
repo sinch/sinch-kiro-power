@@ -1,0 +1,52 @@
+---
+name: sinch-templates-delete
+description: "Delete a message template via Sinch Template Management API (V2)"
+license: Apache-2.0
+user-invocable: true
+disable-model-invocation: true
+metadata:
+  author: Sinch
+  version: "1.0.0"
+  category: Command
+  generated-from: src/commands/api/templates/delete.md
+---
+# Delete Message Template
+
+Delete an omni-channel message template by ID using the Sinch Template Management API V2.
+
+**IMPORTANT: Execute this command directly. Do NOT generate script files. Perform the API call immediately.**
+
+## Input
+
+- `--id` / `-i`: Template ID to delete - required
+- `--force` / `-f`: Skip confirmation - optional
+
+Arguments: whatever the user typed after the command name, which may be nothing.
+
+## Instructions
+
+**Execute these steps directly - do not write code or scripts:**
+
+0. If the request has no details: ask for template ID. Optionally list templates to help user choose. Otherwise parse.
+
+1. Validate: --id (non-empty). If not --force, confirm with user: "Delete template {id}? Type 'yes' to confirm."
+
+2. Get CONVERSATION_* env vars. Template API: https://{region}.template.api.sinch.com. If missing, report "Sinch API is not configured."
+
+3. DELETE https://{region}.template.api.sinch.com/v2/projects/{projectId}/templates/{template_id} with OAuth2.
+
+4. On success: "✅ Template deleted". Handle 404 (not found), 401 with clear messages.
+
+5. Handle all errors gracefully.
+
+## Examples
+
+```
+/sinch:api:templates:delete --id=01F8MECHZX3TBDSZ7XRADM79XE
+/sinch:api:templates:delete -i TEMPLATE_ID --force
+```
+
+## API Reference
+
+- **Endpoint**: DELETE /v2/projects/{project_id}/templates/{template_id}
+- **Documentation**: https://developers.sinch.com/docs/conversation/templates/
